@@ -2,82 +2,101 @@
 
 > **AI-Powered Task Management That Organizes Itself**
 
-TaskFlow is a next-generation task management platform that combines the best of Asana's project planning capabilities with AI-powered automation, predictive analytics, and seamless team collaboration. While Asana excels at structured project management, TaskFlow adds intelligent task prioritization, automatic dependency resolution, and workflow optimization that helps teams deliver faster with less overhead.
+TaskFlow is a next-generation task management platform that combines the best of Asana's project planning capabilities with AI-powered automation, predictive analytics, and seamless team collaboration.
 
-## 🚀 Key Features
+## 🚀 Quick Start
 
-- **AI-Powered Task Prioritization** - Automatically prioritizes tasks based on deadlines, dependencies, and business value
-- **Automatic Dependency Management** - Detects and visualizes task dependencies automatically
-- **Predictive Project Analytics** - Forecasts completion dates and identifies at-risk projects
-- **Intelligent Workload Balancing** - Prevents over-allocation and optimizes team capacity
-- **Smart Task Templates & Automation** - AI-generated templates and workflow automation
-- **Real-Time Collaboration Hub** - Live updates, rich comments, and contextual communication
-- **Advanced Views & Customization** - Multiple view types (List, Board, Timeline, Calendar, Table)
-- **Seamless Integrations** - Deep bi-directional sync with GitHub, Jira, Linear, Slack, and 100+ tools
-- **Mobile-First Productivity** - Native iOS/Android apps with offline support
-- **Enterprise Security & Governance** - SSO, RBAC, audit logs, GDPR/CCPA compliance
+### Prerequisites
 
-## 📋 Product Specification
+- Node.js 20+ and npm 10+
+- PostgreSQL 15+
+- Redis 7+
+- Python 3.11+ (for ML services)
 
-See [product-2-asana-alternative.md](./product-2-asana-alternative.md) for the complete product specification including:
+### Installation
 
-- Executive Summary
-- Product Vision
-- Problem Statement
-- Target Customer Profile
-- Core Features & Capabilities
-- Technical Architecture
-- Pricing Model
-- Competitive Positioning
-- Go-to-Market Strategy
-- Roadmap & Future Enhancements
+```bash
+# Install all dependencies
+npm run install:all
 
-## 🎯 Why TaskFlow?
+# Set up environment variables
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
 
-**Vs. Asana:**
-- AI-powered prioritization (Asana is manual)
-- Automatic dependency management (Asana requires manual tracking)
-- Predictive analytics (Asana lacks forecasting)
-- Better mobile experience (offline support, native apps)
-- More affordable (better pricing at scale)
+# Start development servers
+npm run dev
+```
 
-## 📊 Success Metrics
+### Development
 
-- **Time Savings:** ~3 hours/week per person
-- **Process Improvement:** 40% reduction in deadline misses
-- **Cost Savings:** 15-25% lower per-user cost vs. Asana at scale
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:4000
+- **GraphQL**: http://localhost:4000/graphql
+
+## 📁 Project Structure
+
+```
+taskflow/
+├── frontend/          # Next.js 14+ with TypeScript
+├── backend/           # Express.js API server
+├── shared/            # Shared TypeScript types
+├── database/          # Database migrations and schemas
+├── ml-services/       # Python ML services for AI features
+└── docs/              # Documentation
+```
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React 18+, Next.js 14+, TypeScript, Tailwind CSS
-- **Backend:** Node.js 20+, Python 3.11+, PostgreSQL 15+, Redis 7+
-- **Infrastructure:** AWS, Kubernetes, Docker, Terraform
-- **AI/ML:** Priority scoring, dependency detection, duration prediction, risk analysis
+### Frontend
+- React 18+ with TypeScript
+- Next.js 14+ (App Router)
+- Tailwind CSS
+- React Query
+- Zustand
 
-## 📦 Deployment Models
+### Backend
+- Node.js 20+ (Express.js)
+- PostgreSQL 15+
+- Redis 7+
+- GraphQL (Apollo Server)
+- WebSocket (Socket.io)
 
-- **SaaS (Cloud-Hosted)** - Fully managed, 99.9% uptime SLA
-- **Self-Hosted** - Deploy on your infrastructure
-- **Private Cloud** - Dedicated infrastructure with custom SLA
+### ML Services
+- Python 3.11+
+- scikit-learn
+- TensorFlow/PyTorch (for advanced models)
 
-## 💰 Pricing
+## 🎯 Core Features
 
-- **Starter:** $10/user/month - Small teams (5-20 people)
-- **Professional:** $18/user/month - Growing teams (20-100 people)
-- **Enterprise:** $30/user/month - Large organizations (100+ people)
-- **Self-Hosted:** Custom pricing
+- ✅ **AI-Powered Task Prioritization** - Automatically prioritizes tasks
+- ✅ **Automatic Dependency Management** - Detects and visualizes dependencies
+- ✅ **Predictive Project Analytics** - Forecasts completion dates
+- ✅ **Intelligent Workload Balancing** - Prevents over-allocation
+- ✅ **Real-Time Collaboration** - Live updates and collaboration
+- ✅ **Advanced Views** - List, Board, Timeline, Calendar, Table views
+- ✅ **Seamless Integrations** - GitHub, Jira, Linear, Slack, and 100+ tools
 
-## 📞 Contact
+## 📦 Deployment
 
-- **Email:** enterprise@taskflow.com
-- **Website:** taskflow.com
-- **Schedule Demo:** taskflow.com/demo
+### Docker
+
+```bash
+docker-compose up -d
+```
+
+### Manual Deployment
+
+See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for detailed deployment instructions.
 
 ## 📄 License
 
-This product specification is provided for informational purposes.
+This project is proprietary software.
+
+## 📞 Contact
+
+- **Email**: enterprise@taskflow.com
+- **Website**: taskflow.com
 
 ---
 
 **Ready to move beyond manual task management?** TaskFlow brings AI-powered intelligence to task prioritization, dependency management, and project forecasting.
-
