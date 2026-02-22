@@ -1,102 +1,84 @@
-# TaskFlow - Intelligent Task Management Platform
+# taskflow
 
-> **AI-Powered Task Management That Organizes Itself**
+## Detailed Description
 
-TaskFlow is a next-generation task management platform that combines the best of Asana's project planning capabilities with AI-powered automation, predictive analytics, and seamless team collaboration.
+taskflow is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-## 🚀 Quick Start
+## Problem Statement
+
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 20+ and npm 10+
-- PostgreSQL 15+
-- Redis 7+
-- Python 3.11+ (for ML services)
+- Git
+- Project runtime/toolchain for this repo
 
-### Installation
+### Local Setup
 
 ```bash
-# Install all dependencies
-npm run install:all
-
-# Set up environment variables
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
-
-# Start development servers
-npm run dev
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
-### Development
+## Usage
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:4000
-- **GraphQL**: http://localhost:4000/graphql
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-## 📁 Project Structure
+## Quality Standards
 
-```
-taskflow/
-├── frontend/          # Next.js 14+ with TypeScript
-├── backend/           # Express.js API server
-├── shared/            # Shared TypeScript types
-├── database/          # Database migrations and schemas
-├── ml-services/       # Python ML services for AI features
-└── docs/              # Documentation
-```
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-## 🛠️ Tech Stack
+## Security
 
-### Frontend
-- React 18+ with TypeScript
-- Next.js 14+ (App Router)
-- Tailwind CSS
-- React Query
-- Zustand
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-### Backend
-- Node.js 20+ (Express.js)
-- PostgreSQL 15+
-- Redis 7+
-- GraphQL (Apollo Server)
-- WebSocket (Socket.io)
+## Contributing
 
-### ML Services
-- Python 3.11+
-- scikit-learn
-- TensorFlow/PyTorch (for advanced models)
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-## 🎯 Core Features
+## Roadmap
 
-- ✅ **AI-Powered Task Prioritization** - Automatically prioritizes tasks
-- ✅ **Automatic Dependency Management** - Detects and visualizes dependencies
-- ✅ **Predictive Project Analytics** - Forecasts completion dates
-- ✅ **Intelligent Workload Balancing** - Prevents over-allocation
-- ✅ **Real-Time Collaboration** - Live updates and collaboration
-- ✅ **Advanced Views** - List, Board, Timeline, Calendar, Table views
-- ✅ **Seamless Integrations** - GitHub, Jira, Linear, Slack, and 100+ tools
+Track upcoming milestones, technical debt, and planned feature work.
 
-## 📦 Deployment
+## Support
 
-### Docker
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
-```bash
-docker-compose up -d
-```
+## License
 
-### Manual Deployment
-
-See [DEPLOYMENT.md](./docs/DEPLOYMENT.md) for detailed deployment instructions.
-
-## 📄 License
-
-This project is proprietary software.
-
-## 📞 Contact
-
-- **Email**: enterprise@taskflow.com
-- **Website**: taskflow.com
-
----
-
-**Ready to move beyond manual task management?** TaskFlow brings AI-powered intelligence to task prioritization, dependency management, and project forecasting.
+This project is released under the MIT License.
